@@ -28,12 +28,12 @@ then answers with sources.
 echo 'export SPECHUB_API_KEY="sk_live_xxx"' >> ~/.zshrc   # key from your admin
 source ~/.zshrc
 ```
-Optional: `export SPECHUB_API_BASE="https://ds-generator-eg.vercel.app"` (default).
+Optional: `export SPECHUB_API_BASE="https://engenie-eg.vercel.app"` (default).
 
 **Use:** `/engenius-kb 哪些 AP 支援 WiFi 7?` — or just ask EnGenius product
 questions and it triggers automatically.
 
-API reference: https://ds-generator-eg.vercel.app/docs/api-search.html
+API reference: https://engenie-eg.vercel.app/docs/api-search.html
 
 ## Adding a new shareable skill
 

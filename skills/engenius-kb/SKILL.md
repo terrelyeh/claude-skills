@@ -23,12 +23,12 @@ retrieved. We retrieve; you (Claude) generate.
 Two environment variables — the key is secret, never write it into a file or commit it:
 
 ```bash
-export SPECHUB_API_KEY="sk_live_xxx"                       # mint at /settings/api-access
-export SPECHUB_API_BASE="https://ds-generator-eg.vercel.app"   # optional; this is the default
+export SPECHUB_API_KEY="sk_live_xxx"                       # mint at EnGenie → Settings → API Access
+export SPECHUB_API_BASE="https://engenie-eg.vercel.app"   # optional; this is the default
 ```
 
 If `SPECHUB_API_KEY` is unset, stop and tell the user to export it (and where to
-get one: SpecHub → Settings → API Access). Do not proceed without it.
+get one: EnGenie → Settings → API Access). Do not proceed without it.
 
 ## How to answer
 
@@ -40,7 +40,7 @@ get one: SpecHub → Settings → API Access). Do not proceed without it.
    (handles quotes / CJK); if `jq` is missing, use the `python3` form below.
 
    ```bash
-   BASE="${SPECHUB_API_BASE:-https://ds-generator-eg.vercel.app}"
+   BASE="${SPECHUB_API_BASE:-https://engenie-eg.vercel.app}"
    curl -s -X POST "$BASE/api/v1/search" \
      -H "Authorization: Bearer $SPECHUB_API_KEY" \
      -H "Content-Type: application/json" \
@@ -79,7 +79,7 @@ get one: SpecHub → Settings → API Access). Do not proceed without it.
 | HTTP / error | Meaning | What to do |
 |---|---|---|
 | `401` Invalid/Missing key | key wrong or `SPECHUB_API_KEY` unset | Ask the user to set / re-check the key |
-| `403` API key disabled | key disabled in admin | Tell the user to contact the SpecHub admin |
+| `403` API key disabled | key disabled in admin | Tell the user to contact the EnGenie admin |
 | `429` Rate limit exceeded | per-minute cap hit | Wait a few seconds and retry once |
 | `400` | bad request (e.g. empty/too-long query) | Shorten / fix the query |
 | `500` | server error | Retry once; if it persists, report it |
