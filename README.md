@@ -43,7 +43,7 @@ API reference: https://engenie-eg.vercel.app/docs/api-search.html
 
 ## Key management (admins)
 
-Mint per-person / per-team API keys at **SpecHub → Settings → API Access
-(Departments)**. Each key is scoped + rate-limited and can be revoked
+Mint per-person / per-team API keys at **EnGenie → Settings → API Access
+(Departments)** (`engenie-eg.vercel.app/settings/api-access`). Each key is scoped + rate-limited and can be revoked
 individually. Keys are stored hashed (verification) + AES-encrypted (re-copy),
 never in this repo.
